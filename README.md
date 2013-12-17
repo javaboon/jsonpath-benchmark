@@ -17,7 +17,7 @@ Paths are precompiled as it's the use case for Gatling (they are cached)
 
 Build with `mvn clean package`
 
-Run with `java -jar target/microbenchmarks.jar ".*" -wi 2 -i 10 -f 2 -t 16`
+Run with `java -jar target/microbenchmarks.jar ".*" -wi 2 -i 10 -f 2 -t 8`
 
 ## Figures
 
