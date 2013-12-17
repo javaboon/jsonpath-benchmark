@@ -10,7 +10,8 @@ Paths are precompiled as it's the use case for Gatling (they are cached)
 
 ## tl;dr
 
-* Gatling roxx
+* **Gatling implementation is almost 3 TIMES FASTER than Jayway**
+* Jackson currently perfoms better than Boon (~20% faster) on those samples
 * If encoding is one included in the RFC (UTF8, UTF16... but not ISO), it can be efficient to let Jackson do the decoding
 
 ## How to
@@ -28,8 +29,10 @@ Here are the results on my machine:
 * Intel Core i7 2,7 GHz
 
 Benchmark                                                      Mode Thr     Count  Sec         Mean   Mean error    Units
-GatlingJacksonBenchmark.parseBytesPrecompiledRoundRobin       thrpt   8        10    1   163592,442    21059,668    ops/s
-GatlingJsonSmartBenchmark.parseStringPrecompiledRoundRobin    thrpt   8        10    1   126070,263    10783,401    ops/s
-GatlingJacksonBenchmark.parseStringPrecompiledRoundRobin      thrpt   8        10    1   119833,735    13013,194    ops/s
-JaywayJacksonBenchmark.parseBytesPrecompiledRoundRobin        thrpt   8        10    1    51363,345    44727,156    ops/s
-JaywayJacksonBenchmark.parseStringPrecompiledRoundRobin       thrpt   8        10    1    41644,710    34612,538    ops/s
+GatlingJacksonBenchmark.parseBytesPrecompiledRoundRobin       thrpt   8        10    1   164196,598     7202,818    ops/s
+GatlingBoonBenchmark.parseCharsPrecompiledRoundRobin          thrpt   8        10    1   137262,157    15393,496    ops/s
+GatlingJsonSmartBenchmark.parseStringPrecompiledRoundRobin    thrpt   8        10    1   136520,517    12308,920    ops/s
+GatlingJacksonBenchmark.parseStringPrecompiledRoundRobin      thrpt   8        10    1   130905,740    11600,990    ops/s
+GatlingBoonBenchmark.parseBytesPrecompiledRoundRobin          thrpt   8        10    1   104094,400    15263,525    ops/s
+JaywayJacksonBenchmark.parseBytesPrecompiledRoundRobin        thrpt   8        10    1    64422,260    48903,909    ops/s
+JaywayJacksonBenchmark.parseStringPrecompiledRoundRobin       thrpt   8        10    1    45082,837    38283,830    ops/s
