@@ -22,9 +22,13 @@ public class Bytes {
 
 	public static final String WEBXML_PATH1 = "$.web-app.servlet[0].init-param.dataStoreName";
 
-	public static final String TWITTER_PATH1 = "$.results[:3].from_user";
-	public static final String TWITTER_PATH2 = "$.completed_in";
-	public static final String TWITTER_PATH3 = "$.results[?(@.from_user == 'origichara_bot')]";
+	public static final String TWITTER_PATH1 = "$.completed_in";
+	public static final String TWITTER_PATH2 = "$.results[:3].from_user";
+	public static final String TWITTER_PATH3 = "$.results[1:9:-2].from_user";
+	public static final String TWITTER_PATH4 = "$.results[*].to_user_name";
+	public static final String TWITTER_PATH5 = "$.results[5].metadata.result_type";
+	public static final String TWITTER_PATH6 = "$.results[?(@.from_user == 'anna_gatling')]";
+	public static final String TWITTER_PATH7 = "$.results[?(@.from_user_id >= 1126180920)]";
 
 	public static final byte[] GOESSNER_BYTES = readBytes("data/goessner.json");
 	public static final byte[] WEBXML_BYTES = readBytes("data/webxml.json");

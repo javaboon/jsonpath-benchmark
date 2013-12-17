@@ -27,9 +27,9 @@ Here are the results on my machine:
 * Hotspot 1.7.0_45
 * Intel Core i7 2,7 GHz
 
-Benchmark                                                     Mode Thr     Count  Sec         Mean   Mean error    Units
-GatlingJacksonBenchmark.parseBytesPrecompiledRoundRobin       thrpt   8        10    1   256418,290    29865,931    ops/s
-GatlingJsonSmartBenchmark.parseStringPrecompiledRoundRobin    thrpt   8        10    1   198775,973    18876,667    ops/s
-GatlingJacksonBenchmark.parseStringPrecompiledRoundRobin      thrpt   8        10    1   179512,335    18839,311    ops/s
-JaywayJacksonBenchmark.parseBytesPrecompiledRoundRobin        thrpt   8        10    1    73440,395    62832,360    ops/s
-JaywayJacksonBenchmark.parseStringPrecompiledRoundRobin       thrpt   8        10    1    56084,558    51682,445    ops/s
+Benchmark                                                      Mode Thr     Count  Sec         Mean   Mean error    Units
+GatlingJacksonBenchmark.parseBytesPrecompiledRoundRobin       thrpt   8        10    1   163592,442    21059,668    ops/s
+GatlingJsonSmartBenchmark.parseStringPrecompiledRoundRobin    thrpt   8        10    1   126070,263    10783,401    ops/s
+GatlingJacksonBenchmark.parseStringPrecompiledRoundRobin      thrpt   8        10    1   119833,735    13013,194    ops/s
+JaywayJacksonBenchmark.parseBytesPrecompiledRoundRobin        thrpt   8        10    1    51363,345    44727,156    ops/s
+JaywayJacksonBenchmark.parseStringPrecompiledRoundRobin       thrpt   8        10    1    41644,710    34612,538    ops/s
