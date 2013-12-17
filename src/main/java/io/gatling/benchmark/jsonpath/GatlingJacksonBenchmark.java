@@ -86,14 +86,4 @@ public class GatlingJacksonBenchmark {
 		int i = state.next();
 		bh.consume(parseBytesPrecompiled(BYTES_AND_PATHS[i]));
 	}
-
-	public static void main(String[] args) throws Exception {
-
-		Object obj = OBJECT_MAPPER.readValue(BYTES_AND_PATHS[1].bytes, Object.class);
-
-		scala.collection.Iterator<Object> it = BYTES_AND_PATHS[1].path.queryJsonObject(obj);
-		while (it.hasNext()) {
-			System.err.println(it.next());
-		}
-	}
 }
