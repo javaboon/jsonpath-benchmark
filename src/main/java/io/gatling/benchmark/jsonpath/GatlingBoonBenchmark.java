@@ -32,8 +32,7 @@ public class GatlingBoonBenchmark {
 
 	private Object parseCharsPrecompiled(BytesAndPath bytesAndPath) throws Exception {
 		char[] chars = getChars(new String(bytesAndPath.bytes, StandardCharsets.UTF_8));
-		@SuppressWarnings("unchecked")
-		Map<String, Object> json = new JsonParserFactory().setCharset(StandardCharsets.UTF_8).create().parse(Map.class, chars);
+		Object json = new JsonParserFactory().setCharset(StandardCharsets.UTF_8).create().parse(Map.class, chars);
 		return bytesAndPath.path.query(json);
 	}
 
@@ -44,8 +43,7 @@ public class GatlingBoonBenchmark {
 	}
 	
 	private Object parseBytesPrecompiled(BytesAndPath bytesAndPath) throws Exception {
-		@SuppressWarnings("unchecked")
-		Map<String, Object> json = new JsonParserFactory().setCharset(StandardCharsets.UTF_8).create().parse(Map.class, bytesAndPath.bytes);
+		Object json = new JsonParserFactory().setCharset(StandardCharsets.UTF_8).create().parse(Map.class, bytesAndPath.bytes);
 		return bytesAndPath.path.query(json);
 	}
 

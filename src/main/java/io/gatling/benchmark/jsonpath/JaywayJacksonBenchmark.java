@@ -50,7 +50,10 @@ public class JaywayJacksonBenchmark {
 	new BytesAndPath(TWITTER_BYTES, JsonPath.compile(TWITTER_PATH4)), /**/
 	new BytesAndPath(TWITTER_BYTES, JsonPath.compile(TWITTER_PATH5)), /**/
 	new BytesAndPath(TWITTER_BYTES, JsonPath.compile(TWITTER_PATH6)), /**/
-	new BytesAndPath(TWITTER_BYTES, JsonPath.compile(TWITTER_PATH7)) /**/
+	new BytesAndPath(TWITTER_BYTES, JsonPath.compile(TWITTER_PATH7)), /**/
+	new BytesAndPath(TWENTY_K_BYTES, JsonPath.compile(TWENTY_K_PATH1)), /**/
+	new BytesAndPath(TWENTY_K_BYTES, JsonPath.compile(TWENTY_K_PATH2)), /**/
+	new BytesAndPath(TWENTY_K_BYTES, JsonPath.compile(TWENTY_K_PATH3)) /**/
 	};
 
 	@State(Scope.Thread)

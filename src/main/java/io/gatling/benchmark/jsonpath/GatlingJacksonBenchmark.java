@@ -53,7 +53,10 @@ public class GatlingJacksonBenchmark {
 	new BytesAndPath(TWITTER_BYTES, compile(TWITTER_PATH4)), /**/
 	new BytesAndPath(TWITTER_BYTES, compile(TWITTER_PATH5)), /**/
 	new BytesAndPath(TWITTER_BYTES, compile(TWITTER_PATH6)), /**/
-	new BytesAndPath(TWITTER_BYTES, compile(TWITTER_PATH7)) /**/
+	new BytesAndPath(TWITTER_BYTES, compile(TWITTER_PATH7)), /**/
+	new BytesAndPath(TWENTY_K_BYTES, compile(TWENTY_K_PATH1)), /**/
+	new BytesAndPath(TWENTY_K_BYTES, compile(TWENTY_K_PATH2)), /**/
+	new BytesAndPath(TWENTY_K_BYTES, compile(TWENTY_K_PATH3)) /**/
 	};
 
 	private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();

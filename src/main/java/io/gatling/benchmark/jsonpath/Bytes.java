@@ -30,9 +30,14 @@ public class Bytes {
 	public static final String TWITTER_PATH6 = "$.results[?(@.from_user == 'anna_gatling')]";
 	public static final String TWITTER_PATH7 = "$.results[?(@.from_user_id >= 1126180920)]";
 
+	public static final String TWENTY_K_PATH1 = "$..address";
+	public static final String TWENTY_K_PATH2 = "$..friends..name";
+	public static final String TWENTY_K_PATH3 = "$..friends[?(@.id == 1)].name";
+
 	public static final byte[] GOESSNER_BYTES = readBytes("data/goessner.json");
 	public static final byte[] WEBXML_BYTES = readBytes("data/webxml.json");
 	public static final byte[] TWITTER_BYTES = readBytes("data/twitter.json");
+	public static final byte[] TWENTY_K_BYTES = readBytes("data/20k.json");
 
 	private static byte[] readBytes(String path) {
 		try {
