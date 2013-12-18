@@ -31,7 +31,7 @@ public class GatlingJsonSmartBenchmark {
 
 	private Object parseStringPrecompiled(BytesAndPath bytesAndPath) throws Exception {
 		String text = new String(bytesAndPath.bytes, StandardCharsets.UTF_8);
-		return bytesAndPath.path.queryJsonObject(new JSONParser(JSONParser.MODE_PERMISSIVE).parse(text));
+		return bytesAndPath.path.query(new JSONParser(JSONParser.MODE_PERMISSIVE).parse(text));
 	}
 
 	@GenerateMicroBenchmark

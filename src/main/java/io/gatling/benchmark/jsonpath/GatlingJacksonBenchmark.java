@@ -1,8 +1,8 @@
 package io.gatling.benchmark.jsonpath;
 
 import static io.gatling.benchmark.jsonpath.Bytes.*;
-import io.gatling.jsonpath.jsonsmart.JsonPath;
-import io.gatling.jsonpath.jsonsmart.JsonPath$;
+import io.gatling.jsonpath.JsonPath;
+import io.gatling.jsonpath.JsonPath$;
 
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeUnit;
@@ -72,11 +72,11 @@ public class GatlingJacksonBenchmark {
 
 	private Object parseStringPrecompiled(BytesAndPath bytesAndPath) throws Exception {
 		String text = new String(bytesAndPath.bytes, StandardCharsets.UTF_8);
-		return bytesAndPath.path.queryJsonObject(OBJECT_MAPPER.readValue(text, Object.class));
+		return bytesAndPath.path.query(OBJECT_MAPPER.readValue(text, Object.class));
 	}
 
 	private Object parseBytesPrecompiled(BytesAndPath bytesAndPath) throws Exception {
-		return bytesAndPath.path.queryJsonObject(OBJECT_MAPPER.readValue(bytesAndPath.bytes, Object.class));
+		return bytesAndPath.path.query(OBJECT_MAPPER.readValue(bytesAndPath.bytes, Object.class));
 	}
 
 	@GenerateMicroBenchmark
