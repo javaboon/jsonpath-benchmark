@@ -29,10 +29,10 @@ Here are the results on my machine:
 * Intel Core i7 2,7 GHz
 
 Benchmark                                                      Mode Thr     Count  Sec         Mean   Mean error    Units
-GatlingJacksonBenchmark.parseBytesPrecompiledRoundRobin       thrpt   8        10    1   164196,598     7202,818    ops/s
-GatlingBoonBenchmark.parseCharsPrecompiledRoundRobin          thrpt   8        10    1   137262,157    15393,496    ops/s
-GatlingJsonSmartBenchmark.parseStringPrecompiledRoundRobin    thrpt   8        10    1   136520,517    12308,920    ops/s
-GatlingJacksonBenchmark.parseStringPrecompiledRoundRobin      thrpt   8        10    1   130905,740    11600,990    ops/s
-GatlingBoonBenchmark.parseBytesPrecompiledRoundRobin          thrpt   8        10    1   104094,400    15263,525    ops/s
-JaywayJacksonBenchmark.parseBytesPrecompiledRoundRobin        thrpt   8        10    1    64422,260    48903,909    ops/s
-JaywayJacksonBenchmark.parseStringPrecompiledRoundRobin       thrpt   8        10    1    45082,837    38283,830    ops/s
+GatlingJacksonBenchmark.parseBytesPrecompiledRoundRobin       thrpt   8        20    1    93072,818     4120,802    ops/s
+GatlingBoonBenchmark.parseBytesPrecompiledRoundRobin          thrpt   8        20    1    92354,272     7493,019    ops/s
+GatlingBoonBenchmark.parseCharsPrecompiledRoundRobin          thrpt   8        20    1    84029,673     4189,809    ops/s
+GatlingJsonSmartBenchmark.parseStringPrecompiledRoundRobin    thrpt   8        20    1    74342,808     3171,457    ops/s
+GatlingJacksonBenchmark.parseStringPrecompiledRoundRobin      thrpt   8        20    1    73463,343     4708,547    ops/s
+JaywayJacksonBenchmark.parseBytesPrecompiledRoundRobin        thrpt   8        20    1    53042,612    16835,683    ops/s
+JaywayJacksonBenchmark.parseStringPrecompiledRoundRobin       thrpt   8        20    1    43823,404    14019,257    ops/s
