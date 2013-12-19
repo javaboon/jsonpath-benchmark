@@ -11,7 +11,11 @@ Paths are precompiled as it's the use case for Gatling (they are cached)
 ## tl;dr
 
 * **Gatling with Boon is up 3 TIMES FASTER than Jayway**
-* Boon currently performs better than Jackson (~20% faster) on those samples
+* Boon currently performs better than Jackson (~30% to ~200% faster) on these samples
+* Using Boon is 30% faster parsing bytes and up to 2x faster parsing strings than Jackson.
+* Gatling and Jackson are faster than Jayway by up to 2x.
+* Gatling and Boon are up to 3x faster than Jayway.
+* Rick likes coffee.
 
 ## How to
 
