@@ -33,18 +33,21 @@ Here are the results on my machine:
 * Intel Core i7 2,7 GHz
 
 ```
-Benchmark                                                                 Mode Thr     Count  Sec         Mean   Mean error    Units
-i.g.b.j.GatlingBoonSuperFastBenchmark.parseCharsPrecompiledRoundRobin    thrpt   8        10    1   169711.303     7459.674    ops/s
-i.g.b.j.GatlingBoonSuperFastBenchmark.parseBytesPrecompiledRoundRobin    thrpt   8        10    1   168660.442     4926.140    ops/s
+Benchmark                                                         Mode Thr     Count  Sec         Mean   Mean error    Units
+Gatling BoonSuperFastBenchmark.parseCharsPrecompiledRoundRobin    thrpt   8        10    1   169711.303     7459.674    ops/s
+Gatling BoonSuperFastBenchmark.parseBytesPrecompiledRoundRobin    thrpt   8        10    1   168660.442     4926.140    ops/s
 
-i.g.b.j.GatlingBoonFastBenchmark.parseBytesPrecompiledRoundRobin         thrpt   8        10    1   140900.438     1319.706    ops/s
-i.g.b.j.GatlingBoonFastBenchmark.parseCharsPrecompiledRoundRobin         thrpt   8        10    1   130726.245    22760.074    ops/s
+Gatling BoonFastBenchmark.parseBytesPrecompiledRoundRobin         thrpt   8        10    1   140900.438     1319.706    ops/s
+Gatling BoonFastBenchmark.parseCharsPrecompiledRoundRobin         thrpt   8        10    1   130726.245    22760.074    ops/s
 
-i.g.b.j.GatlingJacksonBenchmark.parseBytesPrecompiledRoundRobin          thrpt   8        10    1   104000.898     4232.683    ops/s
-i.g.b.j.GatlingJacksonBenchmark.parseStringPrecompiledRoundRobin         thrpt   8        10    1    82846.282     3028.245    ops/s
+Gatling JacksonBenchmark.parseBytesPrecompiledRoundRobin          thrpt   8        10    1   104000.898     4232.683    ops/s
+Gatling JacksonBenchmark.parseStringPrecompiledRoundRobin         thrpt   8        10    1    82846.282     3028.245    ops/s
 
-i.g.b.j.GatlingJsonSmartBenchmark.parseStringPrecompiledRoundRobin       thrpt   8        10    1    77459.185     3531.564    ops/s
+Gatling JsonSmartBenchmark.parseStringPrecompiledRoundRobin       thrpt   8        10    1    77459.185     3531.564    ops/s
 
-i.g.b.j.JaywayJacksonBenchmark.parseBytesPrecompiledRoundRobin           thrpt   8        10    1    65411.597    20290.173    ops/s
-i.g.b.j.JaywayJacksonBenchmark.parseStringPrecompiledRoundRobin          thrpt   8        10    1    55474.618    17516.355    ops/s
+Jayway JacksonBenchmark.parseBytesPrecompiledRoundRobin           thrpt   8        10    1    65411.597    20290.173    ops/s
+Jayway JacksonBenchmark.parseStringPrecompiledRoundRobin          thrpt   8        10    1    55474.618    17516.355    ops/s
 ```
+
+References:
+https://github.com/javaboon/boon
