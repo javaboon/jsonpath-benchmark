@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import org.boon.json.JsonParser;
 import org.boon.json.JsonParserFactory;
 import org.openjdk.jmh.annotations.GenerateMicroBenchmark;
 import org.openjdk.jmh.annotations.OutputTimeUnit;
@@ -16,7 +17,11 @@ import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.logic.BlackHole;
 
 @OutputTimeUnit(TimeUnit.SECONDS)
-public class GatlingBoonBenchmark {
+@State
+public class GatlingBoonFastBenchmark {
+
+
+    private JsonParser jsonParser = new JsonParserFactory ().createFastParser ();
 
 	@State(Scope.Thread)
 	public static class ThreadState {
@@ -31,8 +36,8 @@ public class GatlingBoonBenchmark {
 	}
 
 	private Object parseCharsPrecompiled(BytesAndPath bytesAndPath) throws Exception {
-		char[] chars = getChars(new String(bytesAndPath.bytes, StandardCharsets.UTF_8));
-		Object json = new JsonParserFactory().setCharset(StandardCharsets.UTF_8).create().parse(Map.class, chars);
+		char[] chars = getChars ( new String ( bytesAndPath.bytes, StandardCharsets.UTF_8 ) );
+        Object json = jsonParser.parse ( Map.class, chars );
 		return bytesAndPath.path.query(json);
 	}
 
@@ -43,7 +48,8 @@ public class GatlingBoonBenchmark {
 	}
 	
 	private Object parseBytesPrecompiled(BytesAndPath bytesAndPath) throws Exception {
-		Object json = new JsonParserFactory().setCharset(StandardCharsets.UTF_8).create().parse(Map.class, bytesAndPath.bytes);
+        Object json = jsonParser.parse ( Map.class, bytesAndPath.bytes );
+
 		return bytesAndPath.path.query(json);
 	}
 
@@ -52,4 +58,7 @@ public class GatlingBoonBenchmark {
 		int i = state.next();
 		bh.consume(parseBytesPrecompiled(BYTES_AND_PATHS[i]));
 	}
+
+
+
 }
